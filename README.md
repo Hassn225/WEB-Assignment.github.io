@@ -1,108 +1,107 @@
-# WEB-Assignment.github.io
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pakistan Railways Registration</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .register-container {
-      background: #fff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 350px;
-    }
-    h2 {
-      color: #006400;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-      color: #444;
-    }
-    label {
-      display: block;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .gender-group {
-      margin-top: 15px;
-    }
-    .gender-group label {
-      font-weight: normal;
-      margin-right: 10px;
-    }
-    .register-btn {
-      width: 100%;
-      padding: 10px;
-      background-color: #006400;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-top: 20px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .links {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .links a {
-      color: #006400;
-      text-decoration: none;
-      display: block;
-      margin-top: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .gender-options {
+            display: flex;
+            gap: 15px;
+        }
+        .gender-option {
+            display: flex;
+            align-items: center;
+        }
+        .gender-option input {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-
-<div class="register-container">
-  <h2>Create a New Account</h2>
-  <p>Register to use Pakistan Railways services</p>
-  
-  <form>
-    <label for="fullname">Full Name</label>
-    <input type="text" id="fullname" placeholder="Your full name">
-
-    <label for="cnic">CNIC</label>
-    <input type="text" id="cnic" placeholder="12345-1234567-1">
-
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Your email address">
-
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Create a password">
-
-    <div class="gender-group">
-      <label>Gender:</label>
-      <label><input type="radio" name="gender" value="male"> Male</label>
-      <label><input type="radio" name="gender" value="female"> Female</label>
-    </div>
-
-    <button class="register-btn" type="submit">Register</button>
-  </form>
-
-  <div class="links">
-    <p>Already have an account? <a href="#">Login Here</a></p>
-  </div>
-</div>
-
+    <form>
+        <div class="form-group">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" value="User Name">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="abc@mail.com">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" value="+923338503885">
+        </div>
+        
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="gender-options">
+                <div class="gender-option">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="gender-option">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        
+        <div class="form-group">
+            <label for="degree">Degree:</label>
+            <select id="degree" name="degree">
+                <option value="BS" selected>BS</option>
+                <option value="MS">MS</option>
+                <option value="PhD">PhD</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
